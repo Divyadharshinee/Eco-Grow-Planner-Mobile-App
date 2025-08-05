@@ -115,9 +115,9 @@ public class ExpertFragment extends Fragment {
 
         RequestBody body = RequestBody.create(jsonBody.toString(), JSON);
         Request request = new Request.Builder()
-                .url("open API key")
+                .url("")
                 .header("Authorization", "") // Replace with actual API key
-                .header("Content-Type", "application/json")
+                .header("Content-Type", "")
                 .post(body)
                 .build();
 
