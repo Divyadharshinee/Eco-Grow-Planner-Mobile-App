@@ -38,7 +38,7 @@ public class ExpertFragment extends Fragment {
     private List<Message> messageList;
     private MessageAdapter messageAdapter;
 
-    public static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
+    public static final MediaType JSON = MediaType.get("");
     private OkHttpClient client = new OkHttpClient.Builder()
             .connectTimeout(60, java.util.concurrent.TimeUnit.SECONDS)
             .readTimeout(60, java.util.concurrent.TimeUnit.SECONDS)
@@ -115,11 +115,11 @@ public class ExpertFragment extends Fragment {
 
         RequestBody body = RequestBody.create(jsonBody.toString(), JSON);
         Request request = new Request.Builder()
-                .url("")
-                .header("", "") // Replace with actual API key
-                .header("", "")
-                .post(body)
-                .build();
+//                .url("")
+//                .header("", "") // Replace with actual API key
+//                .header("", "")
+//                .post(body)
+                 .build();
 
         client.newCall(request).enqueue(new Callback() {
             @Override
