@@ -56,7 +56,7 @@ public class UploadActivity extends AppCompatActivity {
         progressBar.setVisibility(View.GONE);
 
         // Initialize Cloudinary
-        cloudinary = new Cloudinary("cloudinary://281391416621613:OnABnZyQ_Bbl00tKCZZuO3zhtxU@ds04falvc");
+        cloudinary = new Cloudinary("");
 
         // Initialize Firebase Realtime Database
         databaseRef = FirebaseDatabase.getInstance().getReference("uploads");

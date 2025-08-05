@@ -47,8 +47,8 @@ import okhttp3.Response;
 
 public class DiseaseIdentificationActivity extends AppCompatActivity {
     private static final String TAG = "DiagnoseDiseaseActivity";
-    private static final String API_KEY = "YcVATNv08nvrknrgntkRlP97XFj30qP5dZrL3SJCNUX5S4evdk"; // Store securely
-    private static final String API_URL = "https://crop.kindwise.com/api/v1/identification";
+    private static final String API_KEY = ""; // Store securely
+    private static final String API_URL = "";
 
     private ImageView imagePreview;
     private TextView resultText;

@@ -115,8 +115,8 @@ public class ExpertFragment extends Fragment {
 
         RequestBody body = RequestBody.create(jsonBody.toString(), JSON);
         Request request = new Request.Builder()
-                .url("https://api.openai.com/v1/chat/completions")
-                .header("Authorization", "Bearer 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") // Replace with actual API key
+                .url("open API key")
+                .header("Authorization", "") // Replace with actual API key
                 .header("Content-Type", "application/json")
                 .post(body)
                 .build();
