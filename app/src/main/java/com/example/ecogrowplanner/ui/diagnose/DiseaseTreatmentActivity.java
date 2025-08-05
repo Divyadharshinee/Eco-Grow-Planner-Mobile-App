@@ -34,8 +34,8 @@ import okhttp3.Response;
 
 public class DiseaseTreatmentActivity extends AppCompatActivity {
     private static final String TAG = "CropHealthApp";
-    private static final String API_KEY = ""; // Replace with your actual API key
-    private static final String API_URL = "";
+    private static final String API_KEY = "YcVATNv08nvrknrgntkRlP97XFj30qP5dZrL3SJCNUX5S4evdk"; // Replace with your actual API key
+    private static final String API_URL = "https://crop.kindwise.com/api/v1/identification";
     private static final int REQUEST_IMAGE_CAPTURE = 1;
 
     private ImageView imageView;

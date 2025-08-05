@@ -113,13 +113,14 @@ public class ExpertFragment extends Fragment {
             throw new RuntimeException(e);
         }
 
+
         RequestBody body = RequestBody.create(jsonBody.toString(), JSON);
         Request request = new Request.Builder()
-//                .url("")
-//                .header("", "") // Replace with actual API key
-//                .header("", "")
-//                .post(body)
-                 .build();
+                .url("https://api.openai.com/v1/chat/completions")
+                .header("Authorization", "Bearer " + "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") // <-- User enters this in the app
+                .header("Content-Type", "application/json")
+                .post(body)
+                .build();
 
         client.newCall(request).enqueue(new Callback() {
             @Override
