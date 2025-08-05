@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Eco Grow Planner</string>
+    <string-array name="climate_array">
+        <item>All</item>
+        <item>Tropical</item>
+        <item>Temperate</item>
+        <item>Desert</item>
+        <item>Mediterranean</item>
+        <item>Arid</item>
+        <item>Warm</item>
+        <item>Cool</item>
+    </string-array>
+
+    <string-array name="soil_array">
+        <item>All</item>
+        <item>Loamy</item>
+        <item>Sandy</item>
+        <item>Clay</item>
+    </string-array>
+
+    <string-array name="plant_type_array">
+        <item>All</item>
+        <item>Herb</item>
+        <item>Shrub</item>
+        <item>Tree</item>
+        <item>Flower</item>
+        <item>Creeper</item>
+        <item>Succulent</item>
+    </string-array>
+
+    <string-array name="theme_options">
+        <item>Light</item>
+        <item>Dark</item>
+        <item>System Default</item>
+    </string-array>
+
+    <string-array name="theme_values">
+        <item>Light</item>
+        <item>Dark</item>
+        <item>System</item>
+    </string-array>
+
+    <string name="open">Open Drawer</string>
+    <string name="close">Close Drawer</string>
+
+
+    <!-- Language Options -->
+    <string-array name="language_options">
+        <item>English</item>
+        <item>Spanish</item>
+        <item>French</item>
+        <item>German</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>en</item>
+        <item>es</item>
+        <item>fr</item>
+        <item>de</item>
+    </string-array>
+
+
+</resources>
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/gray"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Image with proper aspect ratio handling -->
+        <ImageView
+            android:id="@+id/img_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:contentDescription="Tip Image"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Tip Title -->
+        <TextView
+            android:id="@+id/txt_tip_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tip Title"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="8dp"/>
+
+        <!-- Tip Description -->
+        <TextView
+            android:id="@+id/txt_tip_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tip Description"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:paddingBottom="16dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Notifications Section -->
+    <PreferenceCategory android:title="General Settings">
+
+        <SwitchPreferenceCompat
+            android:key="notifications"
+            android:title="Enable Notifications"
+            android:summary="Turn on or off app notifications"
+            android:defaultValue="true"
+            android:icon="@android:drawable/ic_dialog_info" />
+
+    </PreferenceCategory>
+
+    <!-- Appearance Section -->
+    <PreferenceCategory android:title="Appearance">
+
+        <ListPreference
+            android:key="theme"
+            android:title="Theme Mode"
+            android:summary="Choose between Light or Dark mode"
+            android:defaultValue="Light"
+            android:entries="@array/theme_options"
+            android:entryValues="@array/theme_values"
+            android:icon="@android:drawable/ic_menu_gallery" />
+
+        <ListPreference
+            android:key="language"
+            android:title="Language"
+            android:summary="Choose your preferred language"
+            android:defaultValue="en"
+            android:entries="@array/language_options"
+            android:entryValues="@array/language_values"
+            android:icon="@android:drawable/ic_menu_manage" />
+
+    </PreferenceCategory>
+
+    <!-- Account Section -->
+    <PreferenceCategory android:title="Account Settings">
+
+        <EditTextPreference
+            android:key="username"
+            android:title="Change Username"
+            android:dialogTitle="Enter new username"
+            android:defaultValue="User123"
+            android:icon="@android:drawable/ic_menu_edit" />
+
+        <EditTextPreference
+            android:key="email"
+            android:title="Change Email"
+            android:dialogTitle="Enter new email"
+            android:inputType="textEmailAddress"
+            android:defaultValue="user@example.com"
+            android:icon="@android:drawable/ic_dialog_email" />
+
+        <Preference
+            android:key="change_password"
+            android:title="Change Password"
+            android:summary="Update your account password"
+            android:icon="@android:drawable/ic_lock_lock" />
+
+    </PreferenceCategory>
+
+    <!-- Support & Policies -->
+    <PreferenceCategory android:title="Support  Policies">
+
+        <Preference
+            android:key="share_app"
+            android:title="Share This App"
+            android:summary="Invite your friends to use this app"
+            android:icon="@android:drawable/ic_menu_share" />
+
+        <Preference
+            android:key="terms_of_service"
+            android:title="Terms of Service"
+            android:summary="Read our Terms and Conditions"
+            android:icon="@android:drawable/ic_menu_info_details" />
+
+        <Preference
+            android:key="privacy_policy"
+            android:title="Privacy Policy"
+            android:summary="View our Privacy Policy"
+            android:icon="@android:drawable/ic_secure" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Plant Name Input -->
+        <EditText
+            android:id="@+id/edt_plant_name"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Plant Name"
+            android:inputType="textCapWords"
+            android:minHeight="48dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="16sp"/>
+
+        <!-- Plant Size Input -->
+        <EditText
+            android:id="@+id/edt_plant_size"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Plant Size (cm)"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Water Amount Display -->
+        <TextView
+            android:id="@+id/txt_water_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Water Required: 0 ml"
+            android:textSize="16sp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_marginTop="8dp"
+            android:gravity="center"/>
+
+        <!-- Selected Time Display -->
+        <TextView
+            android:id="@+id/txt_selected_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selected Time: Not Set"
+            android:layout_marginTop="16dp"
+            android:gravity="center"/>
+
+        <!-- Select Time Button -->
+        <Button
+            android:id="@+id/btn_pick_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Reminder Time"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Set Water Reminder Button -->
+        <Button
+            android:id="@+id/btn_set_water_reminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Set Water Reminder"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

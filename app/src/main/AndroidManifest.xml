@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.ecogrowplanner">
+
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <!-- Add permission for notifications (only needed for Android 13+) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" tools:targetApi="33"/>
+    <!-- Camera Feature (not required for devices without a camera) -->
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:fullBackupContent="@xml/backup_rules"
+        tools:replace="android:fullBackupContent"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EcoGrowPlanner"
+        tools:targetApi="34">
+
+
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAhXRJqGMUoKsSfOxMZsRgT3UAFMYPICFI" />
+
+        <uses-library android:name="com.google.android.maps"/>
+
+
+        <!-- Splash Screen (First screen to open) -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Other Activities -->
+        <activity android:name=".LoginActivity" android:exported="true"/>
+        <activity android:name=".SignupActivity" android:exported="true"/>
+        <activity android:name=".ProfileActivity" android:exported="true"/>
+        <activity android:name=".plantselection" android:exported="true"/>
+
+        <activity android:name=".SettingsActivity" android:exported="true"  />
+
+
+        <activity
+        android:name=".MainActivity"
+        android:exported="true">
+    </activity>
+
+
+
+    <!-- Other Activities (Register these if they exist) -->
+    <activity android:name=".activities.IdentifyPlantActivity" />
+    <activity android:name=".activities.DiagnosePlantActivity" />
+    <activity android:name=".activities.ReminderActivity" />
+    <activity android:name=".activities.LightMeterActivity" />
+
+
+    <activity android:name=".ui.community.UploadActivity" android:exported="true" />
+
+    <activity android:name=".ui.camera.IdentifyActivity" android:exported="true" />
+    <activity android:name=".ui.camera.DiagnoseActivity" android:exported="true"/>
+
+
+
+    <activity android:name=".ui.diagnose.CommonProblemsActivity" android:exported="true"/>
+    <activity android:name=".ui.diagnose.DiseaseIdentificationActivity" android:exported="true"/>
+    <activity android:name=".ui.diagnose.CultivationTipsActivity" android:exported="true"/>
+    <activity android:name=".ui.diagnose.DiseaseTreatmentActivity" android:exported="true"/>
+    <activity android:name=".ui.diagnose.PlantCareTipsActivity" android:exported="true"/>
+
+    <activity android:name=".ui.home.DiseaseDiseaseActivity" android:exported="true"/>
+    <activity android:name=".ui.home.FertilizerCalculatorActivity" android:exported="true"/>
+    <activity android:name=".ui.home.FertilizerReminderActivity" android:exported="true"/>
+    <activity android:name=".ui.home.PlantActivity" android:exported="true"/>
+    <activity android:name=".ui.home.LightMeter" android:exported="true"/>
+    <activity android:name=".ui.home.Pruneplant" android:exported="true"/>
+    <activity android:name=".ui.home.WaterCalculatorActivity" android:exported="true"/>
+    <activity android:name=".ui.home.WaterReminderActivity" android:exported="true"/>
+    <activity android:name=".ui.home.WeatherActivity" android:exported="true"/>
+    <receiver android:name=".ui.home.WaterReminderReceiver" android:exported="false" />
+    <receiver android:name=".ui.home.FertilizerReminderReceiver" android:exported="false" />
+
+
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
+
+    </application>
+
+</manifest>

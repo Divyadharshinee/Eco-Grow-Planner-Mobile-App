@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "458878796744",
+    "project_id": "eco-grow-planner",
+    "storage_bucket": "eco-grow-planner.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:458878796744:android:d1fe8e295561f36e8976fd",
+        "android_client_info": {
+          "package_name": "com.example.ecogrowplanner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHWnDP9tbUqDo0G2xCm5pphkNVf8_vT4g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
